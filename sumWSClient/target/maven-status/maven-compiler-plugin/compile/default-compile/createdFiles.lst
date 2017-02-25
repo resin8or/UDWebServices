@@ -1,9 +1,0 @@
-com/mycomp/training/ws/SumWS.class
-com/mycomp/training/ws/sumWSClient/App.class
-com/mycomp/training/ws/CalculateSumResponse.class
-com/mycomp/training/ws/CalculateSum.class
-com/mycomp/training/ws/SumRequest.class
-com/mycomp/training/ws/SumWSService.class
-com/mycomp/training/ws/ObjectFactory.class
-com/mycomp/training/ws/package-info.class
-com/mycomp/training/ws/SumResponse.class

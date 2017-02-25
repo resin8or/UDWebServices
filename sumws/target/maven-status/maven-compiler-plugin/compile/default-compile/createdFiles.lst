@@ -2,3 +2,4 @@ com/mycomp/training/ws/SumWS.class
 com/mycomp/training/ws/SumWSImpl.class
 com/mycomp/training/ws/dto/SumRequest.class
 com/mycomp/training/ws/dto/SumResponse.class
+com/mycomp/training/ws/PasswordCallbackHandler.class

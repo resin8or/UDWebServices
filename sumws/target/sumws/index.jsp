@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Sum Service - <a href="services">Available Services</a></h2>
 </body>
 </html>
