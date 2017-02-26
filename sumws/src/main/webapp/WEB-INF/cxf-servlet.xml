@@ -14,7 +14,8 @@
 			<bean class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
 				<constructor-arg>
 					<map>
-						<entry key="action" value="UsernameToken Encrypt"/>
+						<entry key="action" value="UsernameToken Encrypt Signature"/>
+						<entry key="signaturePropFile" value="etc/servicekeystore.properties"/>
 						<entry key="passwordType" value="PasswordText"/>
 						<entry key="passwordCallbackRef" value-ref="myPasswordCallback"/>
 					    <entry key="decryptionPropFile" value="etc/servicekeystore.properties"/>
@@ -22,6 +23,22 @@
 				</constructor-arg>
 			</bean>
 		</jaxws:inInterceptors>
+		
+		<jaxws:outInterceptors>
+			<bean class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+				<constructor-arg>
+					<map>
+						<entry key="action" value="Encrypt Signature"/>
+						<entry key="signaturePropFile" value="etc/servicekeystore.properties"/>
+						<entry key="encryptionUser" value="myclientkey"/>
+						<entry key="passwordCallbackRef" value-ref="myPasswordCallback"/>
+					    <entry key="encryptionPropFile" value="etc/servicekeystore.properties"/>
+					    <entry key="signatureUser" value="myservicekey"/>
+					</map>
+				</constructor-arg>
+			</bean>
+		</jaxws:outInterceptors>
+		
 	</jaxws:server>
 	
 	<bean id="myPasswordCallback" class="com.mycomp.training.ws.PasswordCallbackHandler"/>
